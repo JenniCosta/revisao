@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    Valor 1:<input type="text" id="val1" placeholder="0-5"><br>
+    Valor 2: <input type="text" id="val2" placeholder="0-5"><br>
+
+    <button onclick="MyFuncao()">Gerar botão</button>
+    <p id="demo"></p>
+
+    <script>
+    var n1 = parseInt(document.getElementById("val1").value);
+
+
+    function MyFuncao(){
+        var msg = "";
+        // esse math.random gera numero aleatórios
+        var compu =Math.random() * 5;    
+        var soma = n1 + compu;
+        
+        // jogador sempre vai ser PAR por isso essa conta de verificação a soma % numero
+        if(soma % 2){
+            msg = msg + "Jogador";
+        }
+        else{
+            msg = msg + "Computador";
+        }
+
+        document.getElementById("demo").innerHTML = msg;
+    }
+
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        Valor 1: <input type="number" id="v1"><br>
+        Valor 2: <input type="number" id="v2"><br>
+        valor 3: <input type="number" id="v3"><br>
+        Valor 4: <input type="number" id="v4"><br>
+        Valor 5: <input type="number" id="v5"><br>
+        Valor 6: <input type="number" id="v6"><br>
+    
+        <button onclick="minhaFuncao()">Gerar Médias</button>
+    
+        <p id="resultado"></p>
+    
+        <script>
+                    
+                    function getNumero(id) {
+                return parseInt(document.getElementById(id).value);
+            }
+            function minhaFuncao(){
+                var temp = new Array;
+                var soma = 0;
+                var mede2 = 0;
+                // Esse for pegando os numeros de dentro do array (temp) e joga na variavel (mede2)
+                for(i=0; i<temp.length; i++){
+                    mede2 += Number(temp[i]);
+                }
+                
+                //  Inserindo os valores dentro do array(temp)
+                 for(var i = 1; i<= 6; i++){
+                 var v = getNumero("v" + i);
+                 var add = temp.push(v);
+                 }
+                    // essa media esta pegando os numeros e dividindo pelo tamanho da variavel
+                 var media = mede2 / temp.length;
+                //  esse Math.max.aplly esta aplicando no valor para pegar o maior
+                 var Maior = Math.max.apply(null, temp);
+                //  e aqui para pegar o menor valor
+                 var menor = Math.min.apply(null, temp);
+                 document.getElementById("resultado").innerHTML= media;
+                 document.getElementById("resultado").innerHTML = Maior;
+                 document.getElementById("resultado").innerHTML = menor;
+                 
+            }
+        </script>
+</body>
+</html>
