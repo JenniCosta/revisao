@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    Idade:<input type="number" id="dade">
+    Sexo:<input type="text" id="sex">
+
+    <button onclick=funcao()>Validar</button>
+
+    <p id="resultado"></p>
+
+    <Script>
+    
+        function funcao(){
+            var idade = parseInt(document.getElementById("dade").value);
+            var sex = document.getElementById("sex").value;
+
+            if((idade < 60) || (idade > 110)){
+                alert("Valor invalido");
+            }
+           
+              if(sexo == "F" || sexo == "M"){
+                console.log("OK");
+             } else{
+                 alert("Sexo invalido");
+             }
+    };
+    
+    
+    
+    </Script>
+</body>
+</html>

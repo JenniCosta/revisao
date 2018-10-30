@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+</head>
+<body>
+    Idade: <input type="number"  id="ida">
+    Sexo: <input type="text" id="sex">
+
+    <button onclick="Funcao()">Validar</button>
+
+    <p id="resultado"></p>
+    <p id="resultado2"></p>
+    <p id="3"></p>
+    
+
+
+    <script>
+
+       
+
+        function Funcao(){
+            var idade =parseInt(document.getElementById("ida").value);
+            var sexo = document.getElementById("sex").value;
+
+            if((sexo =="F") && (idade =>60) && (idade <=70)){
+                document.getElementById("resultado").innerHTML = "sorteio 1";
+            }
+            if((sexo == "M") && (idade => 75) && (idade <110)){
+                document.getElementById("resultado").innerHTML = "sorteio 4"
+            }
+            if((idade =>75) && (sexo == "F")){
+                document.getElementById("3").innerHTML = "sorteio 3";
+            }
+            if((idade => 68) && (idade <75) ){
+                document.getElementById("resultado2").innerHTML = "sorteio 2";
+            }
+        }
+    
+    
+    
+    
+    </script>
+</body>
+</html>
