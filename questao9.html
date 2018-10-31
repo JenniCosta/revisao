@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Idade: <input type="number" id="ida" placeholder="Digite sua idade"><br>
+    Sexo: <input type="text" id="sex" placeholder="F ou M"><br>
+
+    <button onclick="Funcao()">Descobrir Sorteio</button>
+
+    <p id="resultado"></p>
+    <p id="resultado2"></p>
+    <p id="3"></p>
+
+    <script>  
+
+        var sex = new Array(19);
+        var dade =new Array(19);
+        var n;      
+
+    function Funcao(){
+        var sexo = document.getElementById("sex").value;
+        n = parseInt(document.getElementById("ida").value);
+
+            sex.push(sexo);
+                console.log(sex);
+            dade.push(n);
+                console.log(dade);
+
+                validaIdade();
+                sorteio();
+         
+    };
+
+         function sorteio(){
+            
+
+            if((sexo === "F") && (dade >= 60) || (dade <=70)){
+                document.getElementById("resultado").innerHTML = "sorteio 1";
+            }
+            if((sexo === "M") && (dade >= 75) || (dade <=110)){
+                document.getElementById("resultado").innerHTML = "sorteio 4"
+            }
+            if((dade >= 75) && (sexo === "F")){
+                document.getElementById("3").innerHTML = "sorteio 3";
+            }
+            if((dade >= 68) && (dade <75) ){
+                document.getElementById("resultado2").innerHTML = "sorteio 2";
+            }
+         };
+
+         
+        function validaIdade(){
+     
+
+        if(dade < 61 || (dade >= 110) ){
+            alert("Valor invalido");
+        }
+    
+       if(sexo === "F" || sexo === "M"){
+             console.log("OK");
+        } else{
+             alert("Sexo invalido");
+      }
+    };
+    
+    </script>
+
+</body>
+</html>
